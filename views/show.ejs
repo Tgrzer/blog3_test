@@ -1,0 +1,40 @@
+<% include partials/header  %>
+
+
+
+
+
+<div class="container">
+
+
+
+	<ul>
+		<li><%= blog.title %> </li>
+		<li><img src="<%= blog.image %>"></li>
+		<li><%= blog.textArea %> </li>
+	</ul>
+
+
+<a href="/blogs/<%=blog._id%>/edit"><button type="button" class="btn btn-primary">Edit post</button></a>
+
+
+	<a href="/blogs"><button type="button" class="btn btn-success"> See all posts</button></a>
+
+	<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+	  
+	   	  <button type="submit" class="btn btn-primary">Delete</button>
+
+	
+	   
+	  <button type="submit" class="btn btn-primary">Submit</button>
+
+	</form>
+
+
+</div>
+
+
+
+
+
+<% include partials/footer  %>
